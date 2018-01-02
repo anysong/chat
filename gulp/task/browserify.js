@@ -6,9 +6,10 @@ var argv = require('optimist').argv;
 
 gulp.task('browserify', function(){
     var result = gulp.src(config.baseDir + 'js/**/entrance.js')
-    .pipe(browserify(
+    .pipe(browserify({
         'insertGlobals': false
-    ));
+    }));
+
 
     if(!argv.p){
         result.on('error', notify.onError({
