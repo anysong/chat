@@ -3,8 +3,7 @@
 function Core(){
     var that = {};
     that.show = function(){
-        alert(21);
-        alert(41);
+        alert('core1');
     };
     return that;
 };
@@ -13,21 +12,38 @@ module.exports = Core;
 },{}],2:[function(require,module,exports){
 (function(node){
     var core = require('./core/core.js');
-    var leftSide = require('./leftSide/index.js');
+    var left = require('./left/index.js');
+    var right = require('./right/index.js');
+    var textarea = require('./textarea/index.js');
 
-    core().show();
-    leftSide().on();
+    console.log(core);
+    console.log(left);
+    console.log(right);
+    console.log(textarea);
 })(document.body)
 
-},{"./core/core.js":1,"./leftSide/index.js":3}],3:[function(require,module,exports){
-function LeftSide(){
+},{"./core/core.js":1,"./left/index.js":3,"./right/index.js":4,"./textarea/index.js":5}],3:[function(require,module,exports){
+function Left(){
     var that = {};
-    that.on = function(){
-        alert(999);
-    };
     return that;
 };
 
-module.exports = LeftSide;
+module.exports = Left;
+
+},{}],4:[function(require,module,exports){
+function Right(){
+    var that = {};
+    return that;
+};
+
+module.exports = Right;
+
+},{}],5:[function(require,module,exports){
+function Textarea(){
+    var that = {};
+    return that;
+};
+
+module.exports = Textarea;
 
 },{}]},{},[2])

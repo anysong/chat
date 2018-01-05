@@ -1,7 +1,11 @@
 (function(node){
     var core = require('./core/core.js');
-    var leftSide = require('./leftSide/index.js');
+    var left = require('./left/index.js');
+    var right = require('./right/index.js');
+    var textarea = require('./textarea/index.js');
 
-    core().show();
-    leftSide().on();
+    console.log(core);
+    console.log(left);
+    console.log(right);
+    console.log(textarea);
 })(document.body)

@@ -2,8 +2,7 @@
 function Core(){
     var that = {};
     that.show = function(){
-        alert(21);
-        alert(41);
+        alert('core1');
     };
     return that;
 };
